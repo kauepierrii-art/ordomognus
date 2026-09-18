@@ -151,20 +151,15 @@ h1,h2,h3{font-family:var(--serif);font-weight:500;margin:0;color:var(--marfim)}
 .hero{
   position:relative;overflow:hidden;
   padding:42px clamp(24px,4vw,52px);
+  min-height:280px;
   border:1px solid var(--linha-forte);border-radius:var(--radius);
   background:
-    radial-gradient(circle at 82% 20%, rgba(201,162,86,.10), transparent 55%),
-    linear-gradient(135deg, var(--mahogany-soft), #0c0605 72%);
+    linear-gradient(90deg,rgba(8,3,3,.12) 0%,rgba(8,3,3,.07) 48%,rgba(8,3,3,.02) 100%),
+    url("public/brand/ordo-mognus-hero.jpg") center center/cover no-repeat;
   margin-bottom:28px;
 }
-.hero::before{
-  content:"";position:absolute;right:-60px;top:50%;transform:translateY(-50%);
-  width:420px;height:420px;
-  background:
-    repeating-radial-gradient(circle, transparent 0 34px, rgba(201,162,86,.05) 35px 36px);
-  border-radius:50%;
-  pointer-events:none;
-}
+.hero::before{display:none}
+.hero-motto,.hero h1,.hero p{position:relative;z-index:1}
 .hero-motto{font:600 10px var(--corpo);letter-spacing:.32em;color:var(--dourado);text-transform:uppercase;margin:0 0 16px}
 .hero h1{font-size:clamp(30px,4.2vw,46px);letter-spacing:.05em}
 .hero h1 small{display:block;font:600 13px var(--corpo);letter-spacing:.22em;color:var(--marfim-fraco);margin-top:10px;text-transform:uppercase}
