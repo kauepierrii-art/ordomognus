@@ -24,15 +24,15 @@ jobs:
         uses: actions/checkout@v4
       - name: Preparar Pages
         uses: actions/configure-pages@v5
+      - name: Preparar pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 11
       - name: Preparar Node
         uses: actions/setup-node@v4
         with:
           node-version: 24
           cache: pnpm
-      - name: Preparar pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          version: 11
       - name: Instalar dependências
         run: pnpm install --frozen-lockfile
       - name: Gerar site estático
